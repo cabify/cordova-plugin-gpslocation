@@ -100,6 +100,24 @@ public class CordovaGPSLocation extends CordovaPlugin {
 	}
 
 	/**
+	 * Called when the activity is to be on pause. Stop listener.
+	 */
+	public void onPause() {
+		if (mListener != null) {
+			mListener.destroy();
+		}
+	}
+
+	/**
+	 * Called when the activity is to be on pause. Stop listener.
+	 */
+	public void onResume() {
+		if (mListener != null) {
+			mListener.destroy();
+		}
+	}
+
+	/**
 	 * Called when the view navigates. Stop the listeners.
 	 */
 	public void onReset() {
